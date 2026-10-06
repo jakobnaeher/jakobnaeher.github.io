@@ -1,0 +1,93 @@
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #5b6470;
+  --accent: #0a84ff;
+  --card: #f5f5f7;
+  --border: #e5e5ea;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --fg: #f5f5f7;
+    --muted: #98a0aa;
+    --accent: #409cff;
+    --card: #1c1c1e;
+    --border: #2c2c2e;
+  }
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.55;
+  font-size: 16px;
+}
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+header { margin-bottom: 32px; }
+.brand { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.brand h1 { margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
+.brand-bars { display: inline-flex; gap: 4px; }
+.brand-bars span {
+  display: block;
+  width: 22px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.tagline { margin: 0; color: var(--muted); font-size: 16px; }
+.hero p { font-size: 17px; color: var(--fg); }
+.hero p + p { margin-top: 12px; }
+
+section { margin-bottom: 32px; }
+h2 { font-size: 20px; font-weight: 600; margin: 28px 0 10px; letter-spacing: -0.005em; }
+h3 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+p, li { font-size: 15.5px; }
+li { margin-bottom: 6px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+nav.links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 32px 0 24px;
+}
+nav.links a { font-weight: 500; }
+
+.muted { color: var(--muted); font-size: 14px; }
+.lead { font-size: 17px; color: var(--fg); }
+
+article header { margin-bottom: 16px; }
+article header h1 { font-size: 30px; margin-bottom: 4px; }
+article header p { color: var(--muted); margin: 0; font-size: 14px; }
+
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); }
+
+ul.tight { padding-left: 20px; }
+ul.tight li { margin-bottom: 4px; }
+
+.callout {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 18px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* Equant-only presentation additions; this stylesheet is not linked by other app pages. */
+pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 16px; background: var(--card); border-radius: 8px; }
+a { overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
